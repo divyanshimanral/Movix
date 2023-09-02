@@ -49,7 +49,6 @@
     }
     .skeletonItem {
       width: 125px;
-      border:2px solid red;
       @include md {
         width: calc(25% - 15px);
       }
