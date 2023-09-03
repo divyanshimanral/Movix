@@ -11,10 +11,13 @@ import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Img from "../lazyLoadImages/Img";
 import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circleRating/CircleRating";
+import Genres from "../genres/Genres";
 
 import "./styles.scss";
-import Genres from "../genres/Genres";
-const Carousel = ({ data, loading, endpoint }) => {
+
+const Carousel = ({ data, loading, endpoint, title }) => {
+  // console.log(title)
+  // console.log(data)
   const carouselContainer = useRef();
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
@@ -45,6 +48,7 @@ const Carousel = ({ data, loading, endpoint }) => {
   return (
     <div className="carousel">
       <ContentWrapper>
+        {title && <div className="carouselTitle">{title}</div>}
         <BsFillArrowLeftCircleFill
           className="carouselLeftNav arrow"
           onClick={() => navigation("left")}
@@ -56,12 +60,18 @@ const Carousel = ({ data, loading, endpoint }) => {
         {!loading ? (
           <div className="carouselItems" ref={carouselContainer}>
             {data?.results?.map((item) => {
-              //   console.log(item.vote_average.toFixed(1));
+              // console.log(item);
               const posterurl = item.poster_path
                 ? url.poster + item.poster_path
                 : PosterFallback;
               return (
-                <div key={item.id} className="carouselItem" onClick={() => navigate(`/${item.media_type || endpoint}/${item.id}`)}>
+                <div
+                  key={item.id}
+                  className="carouselItem"
+                  onClick={() =>
+                    navigate(`/${item.media_type || endpoint}/${item.id}`)
+                  }
+                >
                   <div className="posterBlock">
                     <Img src={posterurl} />
                     <CircleRating rating={item.vote_average.toFixed(1)} />
