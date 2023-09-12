@@ -13,7 +13,7 @@ const Popular = () => {
   return (
     <div className="carouselSection">
       <ContentWrapper>
-        <spam className="carouselTitle">Popular</spam>
+        <span className="carouselTitle">Popular</span>
         <SwitchTabs data={["Movies", "TV Shows"]} onTabChange={onTabChange} />
       </ContentWrapper>
       <Carousel data={data} loading={loading} endpoint={endpoint}/>

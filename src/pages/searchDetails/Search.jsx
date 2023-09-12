@@ -42,7 +42,7 @@ const Search = () => {
   };
 
   useEffect(() => {
-    setPageNum(1)
+    setPageNum(1);
     fetchInitialData();
   }, [query]);
   return (
@@ -73,7 +73,10 @@ const Search = () => {
               </InfiniteScroll>
             </>
           ) : (
-            <span className="resultNotFound">Sorry, Result not found</span>
+            <span className="resultNotFound">
+              Sorry, Result not found
+              <img src={noResults} />
+            </span>
           )}
         </ContentWrapper>
       )}

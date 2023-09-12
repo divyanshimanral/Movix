@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+// import useSelector and useDispatch for geting the state using useSelector and dispatch for calling the action
 import { useSelector, useDispatch } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -21,6 +22,7 @@ const App = () => {
     fetchApiConfig();
     genresCall();
   }, []);
+
   const fetchApiConfig = () => {
     fetchDataFromApi("/configuration").then((res) => {
       // console.log(res);
@@ -29,7 +31,8 @@ const App = () => {
         poster: res.images.secure_base_url + "original",
         profile: res.images.secure_base_url + "original",
       };
-      // don not forgot to pass the url in getApiConfiguration method
+      // console.log(url)
+      // do not forgot to pass the url in getApiConfiguration method
       dispatch(getApiConfiguration(url));
     });
   };
@@ -42,6 +45,7 @@ const App = () => {
       promises.push(fetchDataFromApi(`/genre/${url}/list`));
     });
     const data = await Promise.all(promises);
+    // Uses Promise.all to wait for all the promises in the promises array to resolve. This means that it will wait for both TV and movie genre data to be fetched from the API.
     // console.log(data);
     data.map(({ genres }) => {
       return genres.map((item) => (allGenres[item.id] = item));

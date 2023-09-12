@@ -5,10 +5,15 @@
   font-weight: 500;
 
   font-synthesis: none;
+  // how fonts are synthesized or generated when a specified font is not available on the user's system."none," which means that the browser should not attempt to synthesize missing fonts, and the text should be displayed in a fallback font if the specified font is not available. This is often used to ensure consistent and predictable text rendering across different devices.
   text-rendering: optimizeLegibility;
+  // This property specifies how text should be rendered for optimal legibility. Setting it to "optimizeLegibility" instructs the browser to render text in a way that prioritizes readability and aesthetics. It may enable features like ligatures and kerning to enhance the appearance of the tex
   -webkit-font-smoothing: antialiased;
+  // this is a vendor-prefixed property for WebKit-based browsers (such as Safari and older versions of Chrome). It controls the anti-aliasing method used for text rendering. Setting it to "antialiased" requests the browser to use anti-aliasing to smooth the edges of characters, making the text appear smoother and more visually pleasing.
   -moz-osx-font-smoothing: grayscale;
+  // This is a vendor-prefixed property for Mozilla Firefox (indicated by "-moz-"). It also controls the anti-aliasing method for text rendering but is specific to Firefox on macOS. Setting it to "grayscale" instructs Firefox to use a grayscale anti-aliasing method, which can improve text readability and appearance on macOS.
   -webkit-text-size-adjust: 100%;
+  // This property is specific to WebKit-based browsers and is used to control the scaling of text on mobile devices when the user changes the device's text size settings. Setting it to "100%" means that the text size should remain at its original size without any scaling based on the user's preferences.
 
   --black: #04152d;
   --black2: #041226;

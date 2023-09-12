@@ -11,6 +11,9 @@
     // media devices me height 700px
     height: 700px;
   }
+  @include sm{
+    height: 590px;
+  }
   .backdrop-img {
     width: 100%;
     height: 100%;

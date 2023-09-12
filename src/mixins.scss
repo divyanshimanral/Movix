@@ -30,8 +30,13 @@
 
 @mixin ellipsis($line: 2) {
   display: -webkit-box;
+  // -webkit-box value is used to create a block-level flex container.
   -webkit-line-clamp: $line;
+  // This property, also webkit-specific, sets the maximum number of lines of text to be displayed within the container. The value is taken from the $line parameter you provide when using the mixin.
   -webkit-box-orient: vertical;
+  // This property specifies the orientation of the flex container. In this case, it's set to vertical, which means the text will flow vertically within the container.
   overflow: hidden;
+  // This property is used to hide any overflowing content that exceeds the specified number of lines. When combined with the other properties, it ensures that text beyond the specified number of lines is not visible.
   text-overflow: ellipsis;
+  // This property specifies that when text overflows the container, it should be truncated with an ellipsis (...) to indicate that there is more content that is not visible.
 }
