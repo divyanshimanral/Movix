@@ -1,8 +1,21 @@
-# React + Vite
+# Movix
+Your Go-To Platform for Movie Recommendations and Reviews – Discover, Enjoy, and Share Your Favorites.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used:
+- React.js: Front-end JavaScript library for building user interfaces.
+- SASS: for styling
+- React Router: for easy navigation purpose
 
-Currently, two official plugins are available:
+## Getting Started
+To get a local copy up and running, follow these steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Clone the repository:
+`https://github.com/divyanshimanral/Movie_app.git`
+
+`cd Movie_app`
+
+### Install dependencies:
+`npm install`
+
+### Start the development server:
+`npm run dev`
