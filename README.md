@@ -10,7 +10,7 @@ Your Go-To Platform for Movie Recommendations and Reviews – Discover, Enjoy, a
 To get a local copy up and running, follow these steps:
 
 ### Clone the repository:
-`https://github.com/divyanshimanral/Movie_app.git`
+`https://github.com/divyanshimanral/Movix.git`
 
 `cd Movie_app`
 
